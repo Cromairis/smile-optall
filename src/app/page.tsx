@@ -57,7 +57,7 @@ export default function HomePage() {
                 {DOCTOR_INFO.experience} de experiencia y +{DOCTOR_INFO.surgeries} cirugías exitosas.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <CTAButton size="lg" showPrice href="https://wa.me/525549168798?text=Hola,%20quiero%20agendar%20mi%20valoración%20SMILE" />
+                <CTAButton size="lg" showPrice href="https://wa.me/5215549168798?text=Hola,%20quiero%20agendar%20mi%20valoración%20SMILE" />
                 <CTAButton
                   variant="secondary"
                   size="lg"
