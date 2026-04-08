@@ -26,9 +26,9 @@ export const BUSINESS_INFO = {
     latitude: 19.3116,
     longitude: -99.1873,
   },
-  phone: '+5215549168798',
-  phoneDisplay: '55 4916 8798',
-  whatsapp: 'https://wa.me/5215549168798',
+  phone: '+5215549178798',
+  phoneDisplay: '55 4917 8798',
+  whatsapp: 'https://wa.me/5215549178798',
   email: 'contacto@optallvision.com',
   hours: {
     weekdays: 'Mar-Vie 10:30-16:30',
