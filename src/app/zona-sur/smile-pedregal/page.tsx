@@ -122,10 +122,10 @@ export default function SmilePedregalPage() {
             </div>
             <div className="text-center p-6">
               <div className="text-4xl mb-4">👨‍⚕️</div>
-              <h3 className="text-xl font-semibold mb-2">{DOCTOR_INFO.name}</h3>
+              <h3 className="text-xl font-semibold mb-2">+15,000 Cirugías</h3>
               <p className="text-gray-600">
-                {DOCTOR_INFO.experience} de experiencia y más de {DOCTOR_INFO.surgeries} 
-                cirugías. Certificado por Zeiss para SMILE.
+                El Dr. Sánchez Galeana realiza 8-12 cirugías SMILE al mes
+                con láser VisuMax de Zeiss.
               </p>
             </div>
             <div className="text-center p-6">

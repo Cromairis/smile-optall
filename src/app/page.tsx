@@ -57,11 +57,12 @@ export default function HomePage() {
                 {DOCTOR_INFO.experience} de experiencia y +{DOCTOR_INFO.surgeries} cirugías exitosas.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <CTAButton size="lg" showPrice />
+                <CTAButton size="lg" showPrice href="https://wa.me/525549168798?text=Hola,%20quiero%20agendar%20mi%20valoración%20SMILE" />
                 <CTAButton
                   variant="secondary"
                   size="lg"
                   text="Ver Precios →"
+                  href="/precio-smile-cdmx"
                 />
               </div>
               <div className="mt-6 flex items-center gap-4 text-sm text-gray-500">
@@ -92,7 +93,7 @@ export default function HomePage() {
           <StatGrid>
             <StatCard value={DOCTOR_INFO.experience} label="de Experiencia" icon="🏥" />
             <StatCard value={DOCTOR_INFO.surgeries} label="Cirugías Realizadas" icon="✨" />
-            <StatCard value="15 min" label="Duración del Procedimiento" icon="⏱️" />
+            <StatCard value="8-12" label="SMILE al Mes" icon="📅" />
             <StatCard value="24 hrs" label="Recuperación Visual" icon="👁️" />
           </StatGrid>
         </div>

@@ -6,6 +6,7 @@ interface CTAButtonProps {
   text?: string
   showPrice?: boolean
   className?: string
+  href?: string
 }
 
 export function CTAButton({
@@ -14,6 +15,7 @@ export function CTAButton({
   text,
   showPrice = false,
   className = '',
+  href,
 }: CTAButtonProps) {
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -31,11 +33,14 @@ export function CTAButton({
     ? '💬 Agenda tu Valoración' 
     : 'Conoce más'
 
+  const resolvedHref = href || (variant === 'whatsapp' ? BUSINESS_INFO.whatsapp : '#')
+  const isExternal = resolvedHref.startsWith('http') || resolvedHref.startsWith('https')
+
   return (
     <a
-      href={variant === 'whatsapp' ? BUSINESS_INFO.whatsapp : '#'}
-      target={variant === 'whatsapp' ? '_blank' : undefined}
-      rel={variant === 'whatsapp' ? 'noopener noreferrer' : undefined}
+      href={resolvedHref}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       className={`
         inline-flex items-center justify-center gap-2
         ${sizeClasses[size]}

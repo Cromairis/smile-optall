@@ -77,7 +77,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
           <p>© {currentYear} {BUSINESS_INFO.name}. Todos los derechos reservados.</p>
           <p className="mt-2">
-            {DOCTOR_INFO.name} - Cédula Profesional: XXXXXXX
+            {DOCTOR_INFO.name} - Cédula Profesional: 2016022
           </p>
         </div>
       </div>
