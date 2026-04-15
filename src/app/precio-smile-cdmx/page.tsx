@@ -5,9 +5,9 @@ import { MedicalWebPageSchema, FAQPageSchema, ServiceSchema, BreadcrumbSchema } 
 import { PRICING, DOCTOR_INFO, EQUIPMENT, SITE_CONFIG, BUSINESS_INFO } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Precio Cirugía SMILE CDMX 2025 | $35,000-$55,000 por ojo',
-  description: 'Precio cirugía SMILE en CDMX: $35,000 a $55,000 por ojo. Incluye valoración, cirugía con VisuMax de Zeiss y seguimiento. Hasta 12 MSI disponibles.',
-  keywords: 'precio smile mexico, costo cirugia smile cdmx, smile precio por ojo, cirugia laser ojos precio, financiamiento cirugia ojos',
+  title: 'Precio Cirugía SMILE CDMX 2025 | Consulta y Financiamiento',
+  description: 'Cirugía SMILE en CDMX con tecnología VisuMax de Zeiss. Consulta el precio en tu valoración. Financiamiento hasta 12 MSI disponible.',
+  keywords: 'precio smile mexico, costo cirugia smile cdmx, cirugia laser ojos precio, financiamiento cirugia ojos',
   alternates: {
     canonical: `${SITE_CONFIG.url}/precio-smile-cdmx`,
   },
@@ -19,10 +19,6 @@ const pricingFaqs = [
     answer: 'El precio incluye: consulta de valoración completa, estudios pre-quirúrgicos (topografía, paquimetría, aberrometría), la cirugía SMILE con láser VisuMax de Zeiss, medicamentos post-operatorios, y todas las citas de seguimiento durante 3 meses.',
   },
   {
-    question: '¿Por qué varía el precio entre $35,000 y $55,000?',
-    answer: 'El precio varía según la graduación a corregir. Miopías leves (-1.00 a -3.00) tienen el precio menor, mientras que graduaciones altas (-6.00 a -10.00) o con astigmatismo significativo están en el rango superior por la mayor complejidad técnica.',
-  },
-  {
     question: '¿Aceptan meses sin intereses?',
     answer: `Sí, ofrecemos hasta ${PRICING.smile.msi} meses sin intereses con tarjetas participantes. También aceptamos efectivo, transferencia y tarjeta de débito. Consulta las opciones disponibles al momento de tu cita.`,
   },
@@ -31,12 +27,8 @@ const pricingFaqs = [
     answer: 'No. El precio cubre todo el proceso incluyendo seguimiento por 3 meses. Si requieres un retoque (muy raro, menos del 1% de casos), está cubierto sin costo adicional dentro del primer año.',
   },
   {
-    question: '¿Cuánto cuesta la valoración?',
-    answer: `La consulta de valoración tiene un costo de $${PRICING.consultation.promo.toLocaleString()} MXN (precio regular $${PRICING.consultation.regular.toLocaleString()} MXN). Incluye todos los estudios necesarios para determinar si eres candidato a SMILE.`,
-  },
-  {
-    question: '¿El precio es por ojo o por ambos ojos?',
-    answer: 'El precio indicado es por ojo. La mayoría de pacientes se operan ambos ojos en la misma sesión. Podemos darte un precio especial por ambos ojos al momento de tu valoración.',
+    question: '¿Cómo puedo agendar mi valoración?',
+    answer: 'Puedes agendar tu valoración por WhatsApp o llamando directamente. En la consulta te damos todos los detalles sobre el precio y las opciones de financiamiento.',
   },
 ]
 
@@ -57,8 +49,8 @@ export default function PrecioSmilePage() {
       <ServiceSchema
         serviceName="Cirugía SMILE"
         description="Cirugía refractiva SMILE para corrección de miopía y astigmatismo con láser VisuMax de Zeiss"
-        priceMin={PRICING.smile.min}
-        priceMax={PRICING.smile.max}
+        priceMin={PRICING.smile.price}
+        priceMax={PRICING.smile.price}
         url={`${SITE_CONFIG.url}/precio-smile-cdmx`}
       />
       <FAQPageSchema faqs={pricingFaqs} />
@@ -93,11 +85,11 @@ export default function PrecioSmilePage() {
                 <h2 className="text-2xl font-semibold mb-2">Cirugía SMILE</h2>
                 <p className="text-blue-100 mb-6">Tecnología {EQUIPMENT.laser} de {EQUIPMENT.brand}</p>
                 
-                <div className="text-6xl font-bold mb-2">
-                  ${PRICING.smile.min.toLocaleString()}
+                <div className="text-4xl font-bold mb-2">
+                  Consulta el precio en tu valoración
                 </div>
                 <div className="text-xl text-blue-100 mb-6">
-                  a ${PRICING.smile.max.toLocaleString()} MXN por ojo
+                  Financiamiento disponible
                 </div>
 
                 <div className="bg-white/10 rounded-lg p-4 mb-6">
@@ -113,22 +105,11 @@ export default function PrecioSmilePage() {
               </div>
             </div>
 
-            {/* Valoración */}
+            {/* CTA Valoración */}
             <div className="mt-8 bg-green-50 border border-green-200 rounded-xl p-6 text-center">
-              <p className="text-gray-600 mb-2">Consulta de Valoración</p>
-              <div className="flex items-center justify-center gap-4">
-                <span className="text-gray-400 line-through text-xl">
-                  ${PRICING.consultation.regular.toLocaleString()}
-                </span>
-                <span className="text-3xl font-bold text-green-600">
-                  ${PRICING.consultation.promo.toLocaleString()} MXN
-                </span>
-                <span className="bg-green-500 text-white text-sm px-2 py-1 rounded">
-                  {PRICING.consultation.discount} OFF
-                </span>
-              </div>
-              <p className="text-sm text-gray-500 mt-2">
-                Incluye todos los estudios pre-quirúrgicos
+              <p className="text-lg font-semibold text-gray-800 mb-2">¿Eres candidato a SMILE?</p>
+              <p className="text-sm text-gray-500">
+                Agenda tu valoración y te damos todos los detalles
               </p>
             </div>
           </div>
@@ -173,35 +154,35 @@ export default function PrecioSmilePage() {
               <thead>
                 <tr className="border-b">
                   <th className="py-4 px-4">Procedimiento</th>
-                  <th className="py-4 px-4">Rango de Precio (por ojo)</th>
                   <th className="py-4 px-4">Características</th>
+                  <th className="py-4 px-4">Recuperación</th>
                 </tr>
               </thead>
               <tbody className="text-gray-600">
                 <tr className="border-b bg-blue-50">
                   <td className="py-4 px-4 font-semibold text-blue-600">SMILE</td>
-                  <td className="py-4 px-4">$35,000 - $55,000</td>
-                  <td className="py-4 px-4">Incisión mínima, recuperación rápida</td>
+                  <td className="py-4 px-4">Incisión mínima 2-4mm, sin flap</td>
+                  <td className="py-4 px-4">24-48 horas</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-4 px-4">LASIK</td>
-                  <td className="py-4 px-4">$15,000 - $35,000</td>
-                  <td className="py-4 px-4">Flap corneal, más invasivo</td>
+                  <td className="py-4 px-4">Flap corneal 20mm</td>
+                  <td className="py-4 px-4">24-48 horas</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-4 px-4">PRK/LASEK</td>
-                  <td className="py-4 px-4">$12,000 - $25,000</td>
-                  <td className="py-4 px-4">Sin flap, recuperación lenta</td>
+                  <td className="py-4 px-4">Sin flap, remoción de epitelio</td>
+                  <td className="py-4 px-4">5-7 días</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-4 px-4">Lentes ICL</td>
-                  <td className="py-4 px-4">$40,000 - $80,000</td>
-                  <td className="py-4 px-4">Graduaciones muy altas</td>
+                  <td className="py-4 px-4">Implante intraocular, reversible</td>
+                  <td className="py-4 px-4">24-48 horas</td>
                 </tr>
               </tbody>
             </table>
             <p className="text-sm text-gray-500 mt-4">
-              * Precios aproximados del mercado en CDMX. Los precios varían según la clínica y equipo utilizado.
+              Consulta cuál procedimiento es mejor para ti en tu valoración.
             </p>
           </div>
         </div>
@@ -250,8 +231,7 @@ export default function PrecioSmilePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Listo para ver sin lentes?</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Agenda tu valoración por solo ${PRICING.consultation.promo.toLocaleString()} MXN 
-            y conoce el precio exacto para tu caso.
+            Agenda tu valoración y conoce el precio exacto para tu caso.
           </p>
           <CTAButton
             size="lg"

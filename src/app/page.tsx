@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { StatCard, StatGrid } from '@/components/ui/StatCard'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
@@ -8,7 +9,7 @@ import { DOCTOR_INFO, PRICING, EQUIPMENT, BUSINESS_INFO, SITE_CONFIG } from '@/l
 
 export const metadata: Metadata = {
   title: 'Cirugía SMILE en CDMX | Dr. César Sánchez Galeana | Optall Vision',
-  description: 'Cirugía SMILE con el Dr. César Sánchez Galeana en CDMX. 28 años de experiencia, +15,000 cirugías. Tecnología VisuMax de Zeiss. Consulta de valoración $1,250.',
+  description: 'Cirugía SMILE con el Dr. César Sánchez Galeana en CDMX. 28 años de experiencia, +15,000 cirugías. Tecnología VisuMax de Zeiss. Agenda tu valoración.',
   keywords: 'cirugia smile cdmx, smile laser mexico, correccion miopia cdmx, dr cesar sanchez galeana, optall vision',
   alternates: {
     canonical: SITE_CONFIG.url,
@@ -22,7 +23,7 @@ const homeFaqs = [
   },
   {
     question: '¿Cuánto cuesta la cirugía SMILE en CDMX?',
-    answer: `El precio de la cirugía SMILE en nuestra clínica va de $${PRICING.smile.min.toLocaleString()} a $${PRICING.smile.max.toLocaleString()} MXN por ojo, dependiendo de la graduación. Ofrecemos hasta ${PRICING.smile.msi} meses sin intereses.`,
+    answer: `Consulta el precio en tu valoración. Ofrecemos financiamiento hasta ${PRICING.smile.msi} meses sin intereses.`,
   },
   {
     question: '¿Cuánto dura la recuperación de SMILE?',
@@ -53,15 +54,15 @@ export default function HomePage() {
                 Cirugía <span className="text-blue-600">SMILE</span> en CDMX
               </h1>
               <p className="mt-4 text-xl text-gray-600">
-                Deja los lentes para siempre con la técnica más avanzada de cirugía refractiva.
+                Deja tus lentes con la técnica más avanzada de cirugía refractiva.
                 {DOCTOR_INFO.experience} de experiencia y +{DOCTOR_INFO.surgeries} cirugías exitosas.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <CTAButton size="lg" showPrice href="https://wa.me/5215549178798?text=Hola,%20quiero%20agendar%20mi%20valoración%20SMILE" />
+                <CTAButton size="lg" />
                 <CTAButton
                   variant="secondary"
                   size="lg"
-                  text="Ver Precios →"
+                  text="Más Información →"
                   href="/precio-smile-cdmx"
                 />
               </div>
@@ -73,10 +74,13 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <div className="aspect-video bg-gray-200 rounded-2xl overflow-hidden">
-                {/* Placeholder para video/imagen */}
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  <span className="text-6xl">👁️</span>
-                </div>
+                <Image
+                  src="/martha-debayle.jpg"
+                  alt="Dr. César Sánchez Galeana en Martha Debayle"
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
                 <div className="text-2xl font-bold text-blue-600">{EQUIPMENT.laser}</div>
@@ -163,10 +167,14 @@ export default function HomePage() {
             </div>
             <div className="order-1 md:order-2">
               <div className="aspect-square bg-gray-200 rounded-2xl overflow-hidden">
-                {/* Placeholder para foto del doctor */}
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  <span className="text-6xl">👨‍⚕️</span>
-                </div>
+                <Image
+                  src="/dr-cesar-sanchez.jpg"
+                  alt="Dr. César Sánchez Galeana con Martha Debayle"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -176,22 +184,22 @@ export default function HomePage() {
       {/* Pricing Preview */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Precio Cirugía SMILE</h2>
-          <div className="text-5xl font-bold mb-2">
-            ${PRICING.smile.min.toLocaleString()} - ${PRICING.smile.max.toLocaleString()} MXN
+          <h2 className="text-3xl font-bold mb-4">¿Listo para ver sin lentes?</h2>
+          <div className="text-3xl font-bold mb-2">
+            Consulta el precio en tu valoración
           </div>
-          <p className="text-blue-100 mb-8">por ojo • {PRICING.smile.msiText}</p>
+          <p className="text-blue-100 mb-8">Financiamiento disponible • {PRICING.smile.msiText}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/precio-smile-cdmx"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
-              Ver Detalles de Precio
+              Más Información
             </Link>
             <CTAButton
               variant="secondary"
               size="lg"
-              text={`Valoración $${PRICING.consultation.promo.toLocaleString()} MXN`}
+              text="Agenda tu Valoración"
               className="!bg-transparent !border-white !text-white hover:!bg-white/10"
             />
           </div>
@@ -239,10 +247,16 @@ export default function HomePage() {
               <CTAButton />
             </div>
             <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden">
-              {/* Placeholder para Google Maps embed */}
-              <div className="w-full h-full flex items-center justify-center text-gray-400">
-                <span className="text-4xl">🗺️ Mapa</span>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.5!2d-99.1873!3d19.3116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce00f9b5e0f3c1%3A0x2b6c4e3f1a2b3c4d!2sPerif%C3%A9rico%20Sur%203332%2C%20Jardines%20del%20Pedregal%2C%20CDMX!5e0!3m2!1ses!2smx!4v1680000000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Optall Vision - Periférico Sur 3332"
+              />
             </div>
           </div>
         </div>

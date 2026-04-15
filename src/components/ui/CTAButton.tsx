@@ -71,7 +71,7 @@ export function FloatingCTA() {
         className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-semibold shadow-lg transition-all"
       >
         <span className="text-xl">💬</span>
-        <span>Agenda tu Cita - ${PRICING.consultation.promo.toLocaleString()} MXN</span>
+        <span>Agenda tu Cita</span>
       </a>
     </div>
   )

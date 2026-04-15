@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { MedicalWebPageSchema, FAQPageSchema, BreadcrumbSchema } from '@/components/seo/JsonLd'
-import { SITE_CONFIG, DOCTOR_INFO, PRICING } from '@/lib/constants'
+import { SITE_CONFIG, DOCTOR_INFO } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'SMILE vs LASIK: Diferencias, Ventajas y Cuál Elegir | Guía 2025',
@@ -118,7 +118,7 @@ export default function SmileVsLasikPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-gray-400 mt-1">•</span>
-                  <span><strong>Precio:</strong> $35,000-$55,000/ojo</span>
+                  <span><strong>Precio:</strong> Consultar</span>
                 </li>
               </ul>
             </div>
@@ -156,7 +156,7 @@ export default function SmileVsLasikPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>Precio:</strong> $15,000-$35,000/ojo</span>
+                  <span><strong>Precio:</strong> Consultar</span>
                 </li>
               </ul>
             </div>
@@ -226,9 +226,9 @@ export default function SmileVsLasikPage() {
                   <td className="py-4 px-6 text-center bg-green-50 text-green-700">Sí ✓</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6">Costo aproximado</td>
-                  <td className="py-4 px-6 text-center">$35-55K/ojo</td>
-                  <td className="py-4 px-6 text-center bg-green-50 text-green-700">$15-35K/ojo ✓</td>
+                  <td className="py-4 px-6">Costo</td>
+                  <td className="py-4 px-6 text-center">Consultar</td>
+                  <td className="py-4 px-6 text-center bg-green-50 text-green-700">Consultar</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6">Años en el mercado</td>
@@ -362,7 +362,7 @@ export default function SmileVsLasikPage() {
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
             La única forma de saber cuál es mejor para ti es con una evaluación completa.
-            Agenda tu cita por solo ${PRICING.consultation.promo.toLocaleString()} MXN.
+            Agenda tu cita de valoración.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton
@@ -373,7 +373,7 @@ export default function SmileVsLasikPage() {
               href="/precio-smile-cdmx"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              Ver Precios →
+              Más Información →
             </Link>
           </div>
         </div>

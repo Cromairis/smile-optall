@@ -5,26 +5,26 @@ import { LocalBusinessSchema, FAQPageSchema, BreadcrumbSchema } from '@/componen
 import { SITE_CONFIG, DOCTOR_INFO, PRICING, BUSINESS_INFO, EQUIPMENT } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Cirugía SMILE en Pedregal | Dr. César Sánchez Galeana | Optall Vision',
-  description: 'Cirugía SMILE cerca del Pedregal, CDMX. Clínica en Periférico Sur, a 5 minutos de Jardines del Pedregal. Dr. César Sánchez Galeana, 28 años de experiencia.',
-  keywords: 'smile pedregal, cirugia ojos pedregal, oftalmologos pedregal, lasik pedregal, cirugia refractiva zona sur cdmx',
+  title: 'Cirugía SMILE en San Ángel | Dr. César Sánchez Galeana | Optall Vision',
+  description: 'Cirugía SMILE cerca de San Ángel, CDMX. Clínica en Periférico Sur, a 8 minutos. Dr. César Sánchez Galeana, 28 años de experiencia, +15,000 cirugías.',
+  keywords: 'smile san angel, cirugia ojos san angel, oftalmologos san angel, lasik san angel, cirugia refractiva san angel cdmx',
   alternates: {
-    canonical: `${SITE_CONFIG.url}/zona-sur/smile-pedregal`,
+    canonical: `${SITE_CONFIG.url}/zona-sur/smile-san-angel`,
   },
 }
 
-const pedregaFaqs = [
+const sanAngelFaqs = [
   {
-    question: '¿Dónde está ubicada la clínica respecto al Pedregal?',
-    answer: `Estamos en Periférico Sur 3332, Piso 11, en Jardines del Pedregal. A solo 5 minutos de Pedregal de San Ángel y 10 minutos de Pedregal de Santa Úrsula. Contamos con estacionamiento y fácil acceso desde Insurgentes Sur.`,
+    question: '¿Dónde está ubicada la clínica respecto a San Ángel?',
+    answer: `Estamos en Periférico Sur 3332, Piso 11, en Jardines del Pedregal. A solo 8 minutos de San Ángel por Av. Revolución o Periférico. Muy cerca de San Ángel Inn y la Plaza San Jacinto.`,
   },
   {
     question: '¿Hay estacionamiento disponible?',
     answer: 'Sí, el edificio cuenta con estacionamiento para visitantes. Las primeras 2 horas son cortesía cuando vienes a consulta.',
   },
   {
-    question: '¿Qué tan cerca están de la estación de metro?',
-    answer: 'La estación más cercana es Villa Olímpica (Línea 12) a 15 minutos caminando. Sin embargo, recomendamos llegar en auto o taxi/Uber para mayor comodidad, especialmente el día de la cirugía.',
+    question: '¿Cómo llego desde San Ángel?',
+    answer: 'La ruta más directa es por Av. Revolución hacia el sur hasta Periférico, o directamente por Periférico Sur. Desde Plaza Loreto son aproximadamente 10 minutos.',
   },
   {
     question: '¿Puedo regresar manejando después de la cirugía?',
@@ -32,18 +32,18 @@ const pedregaFaqs = [
   },
 ]
 
-export default function SmilePedregalPage() {
+export default function SmileSanAngelPage() {
   return (
     <>
       <BreadcrumbSchema
         items={[
           { name: 'Inicio', url: SITE_CONFIG.url },
           { name: 'Zona Sur', url: `${SITE_CONFIG.url}/zona-sur` },
-          { name: 'SMILE Pedregal', url: `${SITE_CONFIG.url}/zona-sur/smile-pedregal` },
+          { name: 'SMILE San Ángel', url: `${SITE_CONFIG.url}/zona-sur/smile-san-angel` },
         ]}
       />
-      <LocalBusinessSchema neighborhood="pedregal" areaName="Pedregal" />
-      <FAQPageSchema faqs={pedregaFaqs} />
+      <LocalBusinessSchema neighborhood="san-angel" areaName="San Ángel" />
+      <FAQPageSchema faqs={sanAngelFaqs} />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-green-50 to-white py-16">
@@ -53,19 +53,19 @@ export default function SmilePedregalPage() {
             <span className="mx-2">/</span>
             <a href="/zona-sur" className="hover:text-blue-600">Zona Sur</a>
             <span className="mx-2">/</span>
-            <span className="text-gray-900">SMILE Pedregal</span>
+            <span className="text-gray-900">SMILE San Ángel</span>
           </nav>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                📍 A 5 min del Pedregal
+                📍 A 8 min de San Ángel
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-                Cirugía <span className="text-blue-600">SMILE</span> cerca del Pedregal
+                Cirugía <span className="text-blue-600">SMILE</span> cerca de San Ángel
               </h1>
               <p className="mt-4 text-xl text-gray-600">
-                La clínica de cirugía refractiva más cercana a Pedregal de San Ángel.
+                La mejor opción en cirugía refractiva para residentes de San Ángel.
                 Tecnología {EQUIPMENT.laser} de Zeiss y {DOCTOR_INFO.experience} de experiencia.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -91,14 +91,22 @@ export default function SmilePedregalPage() {
               <div className="bg-white rounded-lg p-4 mb-4">
                 <p className="text-sm text-gray-600 mb-2"><strong>Distancias aproximadas:</strong></p>
                 <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Pedregal de San Ángel: 5 min en auto</li>
-                  <li>• Jardines del Pedregal: 3 min en auto</li>
-                  <li>• Pedregal de Santa Úrsula: 10 min en auto</li>
-                  <li>• Coyoacán Centro: 12 min en auto</li>
+                  <li>• San Ángel Inn: 8 min en auto</li>
+                  <li>• Plaza Loreto: 10 min en auto</li>
+                  <li>• Chimalistac: 7 min en auto</li>
+                  <li>• Guadalupe Inn: 5 min en auto</li>
                 </ul>
               </div>
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                <span className="text-4xl">🗺️</span>
+              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.5!2d-99.1873!3d19.3116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE4JzQxLjgiTiA5OcKwMTEnMTQuMyJX!5e0!3m2!1ses!2smx!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
@@ -109,15 +117,15 @@ export default function SmilePedregalPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            ¿Por qué elegirnos en la Zona Sur?
+            ¿Por qué elegirnos desde San Ángel?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-semibold mb-2">Ubicación Premium</h3>
+              <h3 className="text-xl font-semibold mb-2">Cerca de Casa</h3>
               <p className="text-gray-600">
-                Edificio corporativo en Periférico Sur con estacionamiento, 
-                fácil acceso y todas las comodidades.
+                Evita cruzar toda la ciudad. Estamos sobre Periférico Sur,
+                a minutos de San Ángel por Revolución.
               </p>
             </div>
             <div className="text-center p-6">
@@ -144,18 +152,18 @@ export default function SmilePedregalPage() {
       <section className="py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Colonias cercanas que atendemos
+            Colonias de San Ángel que atendemos
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
-              'Pedregal de San Ángel',
-              'Jardines del Pedregal',
-              'Pedregal de Santa Úrsula',
-              'San Jerónimo',
-              'Tizapán',
-              'Villa Olímpica',
-              'Pedregal de Carrasco',
-              'Héroes de Padierna',
+              'San Ángel',
+              'San Ángel Inn',
+              'Chimalistac',
+              'Guadalupe Inn',
+              'Florida',
+              'Tlacopac',
+              'Altavista',
+              'Progreso',
             ].map((colonia) => (
               <div
                 key={colonia}
@@ -176,9 +184,6 @@ export default function SmilePedregalPage() {
             Consulta el precio en tu valoración
           </div>
           <p className="text-blue-100 mb-8">Financiamiento disponible • {PRICING.smile.msiText}</p>
-          <p className="mb-8 text-blue-100">
-            Agenda tu valoración y descubre si eres candidato
-          </p>
           <CTAButton
             size="lg"
             className="!bg-white !text-blue-600 hover:!bg-blue-50"
@@ -190,10 +195,10 @@ export default function SmilePedregalPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Preguntas sobre nuestra ubicación
+            Preguntas frecuentes - San Ángel
           </h2>
           <div className="max-w-3xl mx-auto">
-            <FAQAccordion faqs={pedregaFaqs} />
+            <FAQAccordion faqs={sanAngelFaqs} />
           </div>
         </div>
       </section>
@@ -228,8 +233,16 @@ export default function SmilePedregalPage() {
                 <CTAButton text="💬 WhatsApp" />
               </div>
             </div>
-            <div className="aspect-square bg-gray-200 rounded-xl flex items-center justify-center">
-              <span className="text-6xl">🗺️</span>
+            <div className="aspect-square bg-gray-200 rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.5!2d-99.1873!3d19.3116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE4JzQxLjgiTiA5OcKwMTEnMTQuMyJX!5e0!3m2!1ses!2smx!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>

@@ -225,14 +225,13 @@ export default function SmileCoyoacanPage() {
       {/* Pricing */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Precio SMILE para pacientes de Coyoacán</h2>
-          <div className="text-5xl font-bold mb-2">
-            ${PRICING.smile.min.toLocaleString()} - ${PRICING.smile.max.toLocaleString()} MXN
+          <h2 className="text-3xl font-bold mb-4">¿Listo para ver sin lentes?</h2>
+          <div className="text-3xl font-bold mb-2">
+            Consulta el precio en tu valoración
           </div>
-          <p className="text-blue-100 mb-8">por ojo • {PRICING.smile.msiText}</p>
+          <p className="text-blue-100 mb-8">Financiamiento disponible • {PRICING.smile.msiText}</p>
           <p className="mb-8 text-blue-100">
-            Valoración: <span className="line-through">${PRICING.consultation.regular.toLocaleString()}</span>{' '}
-            <span className="text-white font-bold">${PRICING.consultation.promo.toLocaleString()} MXN</span>
+            Agenda tu valoración y descubre si eres candidato
           </p>
           <CTAButton
             size="lg"

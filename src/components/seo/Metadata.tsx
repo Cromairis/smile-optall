@@ -73,7 +73,7 @@ export function generateSEOMetadata({
 // Metadata preconfiguradas para páginas principales
 export const homeMetadata = generateSEOMetadata({
   title: 'Cirugía SMILE en CDMX | Dr. César Sánchez Galeana | Optall Vision',
-  description: 'Cirugía SMILE con el Dr. César Sánchez Galeana en CDMX. 28 años de experiencia, +15,000 cirugías. Tecnología VisuMax de Zeiss. Consulta de valoración $1,250.',
+  description: 'Cirugía SMILE con el Dr. César Sánchez Galeana en CDMX. 28 años de experiencia, +15,000 cirugías. Tecnología VisuMax de Zeiss. Agenda tu valoración.',
   path: '/',
   keywords: [
     'cirugia smile cdmx',
@@ -86,8 +86,8 @@ export const homeMetadata = generateSEOMetadata({
 })
 
 export const precioMetadata = generateSEOMetadata({
-  title: 'Precio Cirugía SMILE CDMX 2025 | $35,000-$55,000 por ojo',
-  description: 'Precio cirugía SMILE en CDMX: $35,000 a $55,000 por ojo. Incluye valoración, cirugía con VisuMax de Zeiss y seguimiento. Hasta 12 MSI disponibles.',
+  title: 'Precio Cirugía SMILE CDMX 2025 | Consulta y Financiamiento',
+  description: 'Cirugía SMILE en CDMX con tecnología VisuMax de Zeiss. Consulta el precio en tu valoración. Financiamiento hasta 12 MSI disponible.',
   path: '/precio-smile-cdmx',
   keywords: [
     'precio smile mexico',
