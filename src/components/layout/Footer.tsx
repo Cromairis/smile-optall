@@ -77,8 +77,9 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
           <p>© {currentYear} {BUSINESS_INFO.name}. Todos los derechos reservados.</p>
           <p className="mt-2">
-            {DOCTOR_INFO.name} - Cédula Profesional: 2016022
+            {DOCTOR_INFO.name} - Cédula Profesional: 2016022 · Cédula de Especialidad en Oftalmología: 3279365
           </p>
+          <p className="mt-1 text-xs text-gray-500">Aviso de publicidad COFEPRIS: en trámite</p>
         </div>
       </div>
     </footer>
