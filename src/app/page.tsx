@@ -67,7 +67,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="mt-6 flex items-center gap-4 text-sm text-gray-500">
-                <span>✓ Sin dolor</span>
+                <span>✓ Sencilla</span>
                 <span>✓ 15 minutos</span>
                 <span>✓ Recuperación 24h</span>
               </div>
