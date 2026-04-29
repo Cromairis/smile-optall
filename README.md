@@ -118,3 +118,5 @@ Todos los datos del negocio están en `src/lib/constants.ts`:
 - 📍 Periférico Sur 3332, Piso 11, Jardines del Pedregal
 - 📞 55 4916 8798
 - 💬 [WhatsApp](https://wa.me/525549168798)
+
+<!-- Updated 2026-04-28 -->
