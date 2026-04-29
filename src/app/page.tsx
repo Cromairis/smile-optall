@@ -55,7 +55,7 @@ export default function HomePage() {
               </h1>
               <p className="mt-4 text-xl text-gray-600">
                 Deja tus lentes con la técnica más avanzada de cirugía refractiva.
-                {DOCTOR_INFO.experience} de experiencia y +{DOCTOR_INFO.surgeries} cirugías exitosas.
+                {DOCTOR_INFO.experience} de experiencia y +{DOCTOR_INFO.surgeries} cirugías realizadas.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <CTAButton size="lg" />
@@ -131,7 +131,7 @@ export default function HomePage() {
               <h3 className="text-xl font-semibold mb-2">Mayor Estabilidad</h3>
               <p className="text-gray-600">
                 Córnea más resistente post-cirugía. Ideal para deportistas
-                y estilos de vida activos. Resultados duraderos.
+                y estilos de vida activos. Resultados estables a largo plazo en pacientes candidatos.
               </p>
             </div>
           </div>
