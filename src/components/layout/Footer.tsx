@@ -13,7 +13,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">SMILE Optall Vision</h3>
             <p className="text-gray-400 text-sm">
               Cirugía SMILE con tecnología VisuMax de Zeiss. {DOCTOR_INFO.experience} de experiencia
-              y más de {DOCTOR_INFO.surgeries} cirugías exitosas.
+              y más de {DOCTOR_INFO.surgeries} cirugías realizadas.
             </p>
           </div>
 
