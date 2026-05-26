@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const pricingFaqs = [
   {
     question: '¿Qué incluye el precio de la cirugía SMILE?',
-    answer: 'El precio incluye: consulta de valoración completa, estudios pre-quirúrgicos (topografía, paquimetría, aberrometría), la cirugía SMILE con láser VisuMax de Zeiss, medicamentos post-operatorios, y todas las citas de seguimiento durante 3 meses.',
+    answer: 'El precio incluye: consulta de valoración completa, la cirugía SMILE con láser VisuMax de Zeiss, y consultas de seguimiento 1 día y 1 semana después.',
   },
   {
     question: '¿Aceptan meses sin intereses?',
@@ -24,7 +24,7 @@ const pricingFaqs = [
   },
   {
     question: '¿Hay costos adicionales después de la cirugía?',
-    answer: 'No. El precio cubre todo el proceso incluyendo seguimiento por 3 meses. Si requieres un retoque (muy raro, menos del 1% de casos), está cubierto sin costo adicional dentro del primer año.',
+    answer: 'No. El precio cubre todo el proceso incluyendo seguimiento 1 día y 1 semana después. Si requieres un retoque en los primeros 6 meses, solo se cobra quirófano (sin honorarios médicos).',
   },
   {
     question: '¿Cómo puedo agendar mi valoración?',
@@ -124,11 +124,9 @@ export default function PrecioSmilePage() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: '🔬', title: 'Estudios Pre-quirúrgicos', desc: 'Topografía, paquimetría, aberrometría y más' },
               { icon: '⚡', title: 'Cirugía SMILE', desc: `Con láser ${EQUIPMENT.laser} de ${EQUIPMENT.brand}` },
-              { icon: '💊', title: 'Medicamentos', desc: 'Gotas y medicinas post-operatorias' },
-              { icon: '📋', title: 'Seguimiento 3 Meses', desc: 'Todas las citas de control incluidas' },
-              { icon: '🛡️', title: 'Garantía de Retoque', desc: 'Primer año sin costo adicional' },
+              { icon: '📋', title: 'Seguimiento', desc: 'Consulta 1 día y 1 semana después' },
+              { icon: '🛡️', title: 'Retoque 6 meses', desc: '(sin honorarios médicos, no incluye quirófano)' },
               { icon: '👨‍⚕️', title: 'Atención Personalizada', desc: `Por el ${DOCTOR_INFO.name}` },
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm flex items-start gap-4">
