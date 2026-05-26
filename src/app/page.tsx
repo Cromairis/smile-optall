@@ -23,7 +23,7 @@ const homeFaqs = [
   },
   {
     question: '¿Cuánto cuesta la cirugía SMILE en CDMX?',
-    answer: `Consulta el precio en tu valoración. Ofrecemos financiamiento hasta ${PRICING.smile.msi} meses sin intereses.`,
+    answer: 'Consulta el precio en tu valoración. Aceptamos diferentes formas de pago.',
   },
   {
     question: '¿Cuánto dura la recuperación de SMILE?',

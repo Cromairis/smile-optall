@@ -144,8 +144,8 @@ export default function SmileCoyoacanPage() {
               <div className="text-4xl mb-4">💰</div>
               <h3 className="font-semibold mb-2">Precios Justos</h3>
               <p className="text-sm text-gray-600">
-                Precio competitivo con hasta 12 MSI.
-                Sin costos ocultos.
+                Precio competitivo, sin costos ocultos.
+                Diferentes formas de pago.
               </p>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function SmileCoyoacanPage() {
           <div className="text-3xl font-bold mb-2">
             Consulta el precio en tu valoración
           </div>
-          <p className="text-blue-100 mb-8">Financiamiento disponible • {PRICING.smile.msiText}</p>
+          <p className="text-blue-100 mb-8">Diferentes formas de pago disponibles</p>
           <p className="mb-8 text-blue-100">
             Agenda tu valoración y descubre si eres candidato
           </p>

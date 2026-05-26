@@ -183,7 +183,7 @@ export default function SmileContrerasPage() {
           <div className="text-3xl font-bold mb-2">
             Consulta el precio en tu valoración
           </div>
-          <p className="text-blue-100 mb-8">Financiamiento disponible • {PRICING.smile.msiText}</p>
+          <p className="text-blue-100 mb-8">Diferentes formas de pago disponibles</p>
           <CTAButton
             size="lg"
             className="!bg-white !text-blue-600 hover:!bg-blue-50"
