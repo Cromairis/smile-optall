@@ -6,7 +6,7 @@ import { PRICING, DOCTOR_INFO, EQUIPMENT, SITE_CONFIG, BUSINESS_INFO } from '@/l
 
 export const metadata: Metadata = {
   title: 'Precio Cirugía SMILE CDMX 2025 | Consulta y Financiamiento',
-  description: 'Cirugía SMILE en CDMX con tecnología VisuMax de Zeiss. Consulta el precio en tu valoración. Financiamiento hasta 12 MSI disponible.',
+  description: 'Cirugía SMILE en CDMX con tecnología VisuMax de Zeiss. Consulta el precio en tu valoración.',
   keywords: 'precio smile mexico, costo cirugia smile cdmx, cirugia laser ojos precio, financiamiento cirugia ojos',
   alternates: {
     canonical: `${SITE_CONFIG.url}/precio-smile-cdmx`,
@@ -19,16 +19,12 @@ const pricingFaqs = [
     answer: 'El precio incluye: consulta de valoración completa, la cirugía SMILE con láser VisuMax de Zeiss, y consultas de seguimiento 1 día y 1 semana después.',
   },
   {
-    question: '¿Aceptan meses sin intereses?',
-    answer: `Sí, ofrecemos hasta ${PRICING.smile.msi} meses sin intereses con tarjetas participantes. También aceptamos efectivo, transferencia y tarjeta de débito. Consulta las opciones disponibles al momento de tu cita.`,
-  },
-  {
     question: '¿Hay costos adicionales después de la cirugía?',
     answer: 'No. El precio cubre todo el proceso incluyendo seguimiento 1 día y 1 semana después. Si requieres un retoque en los primeros 6 meses, solo se cobra quirófano (sin honorarios médicos).',
   },
   {
     question: '¿Cómo puedo agendar mi valoración?',
-    answer: 'Puedes agendar tu valoración por WhatsApp o llamando directamente. En la consulta te damos todos los detalles sobre el precio y las opciones de financiamiento.',
+    answer: 'Puedes agendar tu valoración por WhatsApp o llamando directamente. En la consulta te damos todos los detalles sobre el precio y las opciones de pago.',
   },
 ]
 
@@ -69,7 +65,7 @@ export default function PrecioSmilePage() {
               Precio Cirugía <span className="text-blue-600">SMILE</span> en CDMX 2025
             </h1>
             <p className="mt-4 text-xl text-gray-600">
-              Inversión transparente con {PRICING.smile.msiText}. Sin costos ocultos.
+              Inversión transparente. Sin costos ocultos.
               Incluye valoración, cirugía y seguimiento completo.
             </p>
           </div>
@@ -85,16 +81,8 @@ export default function PrecioSmilePage() {
                 <h2 className="text-2xl font-semibold mb-2">Cirugía SMILE</h2>
                 <p className="text-blue-100 mb-6">Tecnología {EQUIPMENT.laser} de {EQUIPMENT.brand}</p>
                 
-                <div className="text-4xl font-bold mb-2">
+                <div className="text-4xl font-bold mb-6">
                   Consulta el precio en tu valoración
-                </div>
-                <div className="text-xl text-blue-100 mb-6">
-                  Financiamiento disponible
-                </div>
-
-                <div className="bg-white/10 rounded-lg p-4 mb-6">
-                  <p className="font-semibold">{PRICING.smile.msiText}</p>
-                  <p className="text-sm text-blue-100">con tarjetas participantes</p>
                 </div>
 
                 <CTAButton
@@ -194,7 +182,7 @@ export default function PrecioSmilePage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-8 mb-8">
             {[
-              { icon: '💳', label: 'Tarjeta de Crédito', sub: 'Hasta 12 MSI' },
+              { icon: '💳', label: 'Tarjeta de Crédito', sub: 'Pago seguro' },
               { icon: '💰', label: 'Efectivo', sub: 'Pago en clínica' },
               { icon: '🏦', label: 'Transferencia', sub: 'SPEI/Depósito' },
               { icon: '💳', label: 'Tarjeta de Débito', sub: 'Un solo pago' },
@@ -207,7 +195,7 @@ export default function PrecioSmilePage() {
             ))}
           </div>
           <p className="text-gray-600">
-            Consulta tarjetas participantes y promociones vigentes al momento de tu cita.
+            Consulta las opciones de pago disponibles al momento de tu cita.
           </p>
         </div>
       </section>
