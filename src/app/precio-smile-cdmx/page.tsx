@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { MedicalWebPageSchema, FAQPageSchema, ServiceSchema, BreadcrumbSchema } from '@/components/seo/JsonLd'
-import { PRICING, DOCTOR_INFO, EQUIPMENT, SITE_CONFIG, BUSINESS_INFO } from '@/lib/constants'
+import { DOCTOR_INFO, EQUIPMENT, SITE_CONFIG, BUSINESS_INFO } from '@/lib/constants'
 
 const PRICE_CANONICAL = 'https://optallvision.com/blog/cuanto-cuesta-una-cirugia-smile-en-mexico/'
 
@@ -67,7 +67,8 @@ export default function PrecioSmilePage() {
               Cirugía <span className="text-blue-600">SMILE</span>: precio en CDMX 2026
             </h1>
             <p className="mt-4 text-xl text-gray-600">
-              La cirugía cuesta de $40,000 a $50,000 MXN por ambos ojos.\n              La evaluación cuesta $2,500 MXN y se reembolsa si te operas en Optall Vision.
+              La cirugía cuesta de $40,000 a $50,000 MXN por ambos ojos.
+              La evaluación cuesta $2,500 MXN y se reembolsa si te operas en Optall Vision.
             </p>
           </div>
         </div>

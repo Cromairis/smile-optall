@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { LocalBusinessSchema, FAQPageSchema, BreadcrumbSchema } from '@/components/seo/JsonLd'
-import { SITE_CONFIG, PRICING, BUSINESS_INFO, EQUIPMENT } from '@/lib/constants'
+import { SITE_CONFIG, BUSINESS_INFO, EQUIPMENT } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Cirugía SMILE cerca de Coyoacán | Dr. César Sánchez Galeana | Optall Vision',

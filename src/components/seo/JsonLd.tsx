@@ -47,9 +47,9 @@ export function MedicalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '10:30',
-        closes: '16:30',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '17:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
@@ -294,9 +294,9 @@ export function LocalBusinessSchema({ neighborhood, areaName }: LocalBusinessSch
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '10:30',
-        closes: '16:30',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '17:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
