@@ -86,8 +86,8 @@ export const homeMetadata = generateSEOMetadata({
 })
 
 export const precioMetadata = generateSEOMetadata({
-  title: 'Precio Cirugía SMILE CDMX 2025 | Consulta y Financiamiento',
-  description: 'Cirugía SMILE en CDMX con tecnología VisuMax de Zeiss. Consulta el precio en tu valoración. Financiamiento hasta 12 MSI disponible.',
+  title: 'Cirugía SMILE: precio en CDMX 2026',
+  description: 'Cirugía SMILE en Optall Vision: $40,000 a $50,000 MXN por ambos ojos. Evaluación de $2,500, reembolsable si se realiza la cirugía.',
   path: '/precio-smile-cdmx',
   keywords: [
     'precio smile mexico',
