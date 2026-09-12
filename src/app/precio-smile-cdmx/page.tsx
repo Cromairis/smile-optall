@@ -4,27 +4,29 @@ import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { MedicalWebPageSchema, FAQPageSchema, ServiceSchema, BreadcrumbSchema } from '@/components/seo/JsonLd'
 import { PRICING, DOCTOR_INFO, EQUIPMENT, SITE_CONFIG, BUSINESS_INFO } from '@/lib/constants'
 
+const PRICE_CANONICAL = 'https://optallvision.com/blog/cuanto-cuesta-una-cirugia-smile-en-mexico/'
+
 export const metadata: Metadata = {
-  title: 'Precio Cirugía SMILE CDMX 2025 | Consulta y Financiamiento',
-  description: 'Cirugía SMILE en CDMX con tecnología VisuMax de Zeiss. Consulta el precio en tu valoración.',
+  title: 'Cirugía SMILE: precio en CDMX 2026 | Optall Vision',
+  description: 'Cirugía SMILE en Optall Vision: $40,000 a $50,000 MXN por ambos ojos. Evaluación de $2,500, reembolsable si se realiza la cirugía.',
   keywords: 'precio smile mexico, costo cirugia smile cdmx, cirugia laser ojos precio, financiamiento cirugia ojos',
   alternates: {
-    canonical: `${SITE_CONFIG.url}/precio-smile-cdmx`,
+    canonical: PRICE_CANONICAL,
   },
 }
 
 const pricingFaqs = [
   {
     question: '¿Qué incluye el precio de la cirugía SMILE?',
-    answer: 'El precio incluye: consulta de valoración completa, la cirugía SMILE con láser VisuMax de Zeiss, y consultas de seguimiento 1 día y 1 semana después.',
+    answer: 'La cirugía SMILE cuesta de $40,000 a $50,000 MXN por ambos ojos. La evaluación preoperatoria cuesta $2,500 MXN, se cobra por separado y se reembolsa si el paciente se opera en Optall Vision. Confirma en tu cotización los estudios, medicamentos y revisiones incluidos.',
   },
   {
     question: '¿Hay costos adicionales después de la cirugía?',
-    answer: 'No. El precio cubre todo el proceso incluyendo seguimiento 1 día y 1 semana después. Si requieres un retoque en los primeros 6 meses, solo se cobra quirófano (sin honorarios médicos).',
+    answer: 'Los conceptos incluidos pueden variar según el caso. Antes de decidir, confirma por escrito los estudios, medicamentos, revisiones y cualquier posible costo de quirófano o retoque.',
   },
   {
     question: '¿Cómo puedo agendar mi valoración?',
-    answer: 'Puedes agendar tu valoración por WhatsApp o llamando directamente. En la consulta te damos todos los detalles sobre el precio y las opciones de pago.',
+    answer: 'Puedes agendar por WhatsApp o teléfono. La evaluación cuesta $2,500 MXN y es reembolsable si realizas la cirugía en Optall Vision.',
   },
 ]
 
@@ -38,15 +40,15 @@ export default function PrecioSmilePage() {
         ]}
       />
       <MedicalWebPageSchema
-        title="Precio Cirugía SMILE CDMX 2025"
-        description="Precio de cirugía SMILE en CDMX actualizado a 2025"
-        url={`${SITE_CONFIG.url}/precio-smile-cdmx`}
+        title="Cirugía SMILE: precio en CDMX 2026"
+        description="Precio de cirugía SMILE en Optall Vision actualizado a 2026"
+        url={PRICE_CANONICAL}
       />
       <ServiceSchema
         serviceName="Cirugía SMILE"
         description="Cirugía refractiva SMILE para corrección de miopía y astigmatismo con láser VisuMax de Zeiss"
-        priceMin={PRICING.smile.price}
-        priceMax={PRICING.smile.price}
+        priceMin={40000}
+        priceMax={50000}
         url={`${SITE_CONFIG.url}/precio-smile-cdmx`}
       />
       <FAQPageSchema faqs={pricingFaqs} />
@@ -62,11 +64,10 @@ export default function PrecioSmilePage() {
 
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Precio Cirugía <span className="text-blue-600">SMILE</span> en CDMX 2025
+              Cirugía <span className="text-blue-600">SMILE</span>: precio en CDMX 2026
             </h1>
             <p className="mt-4 text-xl text-gray-600">
-              Inversión transparente. Sin costos ocultos.
-              Incluye valoración, cirugía y seguimiento completo.
+              La cirugía cuesta de $40,000 a $50,000 MXN por ambos ojos.\n              La evaluación cuesta $2,500 MXN y se reembolsa si te operas en Optall Vision.
             </p>
           </div>
         </div>
@@ -82,7 +83,7 @@ export default function PrecioSmilePage() {
                 <p className="text-blue-100 mb-6">Tecnología {EQUIPMENT.laser} de {EQUIPMENT.brand}</p>
                 
                 <div className="text-4xl font-bold mb-6">
-                  Consulta el precio en tu valoración
+                  De $40,000 a $50,000 MXN
                 </div>
 
                 <CTAButton
