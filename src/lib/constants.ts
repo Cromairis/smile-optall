@@ -31,15 +31,16 @@ export const BUSINESS_INFO = {
   whatsapp: 'https://wa.me/5215549168798',
   email: 'optallvision@gmail.com',
   hours: {
-    weekdays: 'Mar-Vie 10:30-16:30',
+    weekdays: 'Lun-Vie 9:00-17:00',
     saturday: 'Sáb 9:00-14:00',
     sunday: 'Cerrado',
   },
   openingHours: [
-    'Tu 10:30-16:30',
-    'We 10:30-16:30',
-    'Th 10:30-16:30',
-    'Fr 10:30-16:30',
+    'Mo 09:00-17:00',
+    'Tu 09:00-17:00',
+    'We 09:00-17:00',
+    'Th 09:00-17:00',
+    'Fr 09:00-17:00',
     'Sa 09:00-14:00',
   ],
 }
@@ -71,8 +72,8 @@ export const PRICING = {
   },
   consultation: {
     regular: 2500,
-    promo: 1250,
-    discount: '50%',
+    promo: 2500,
+    discount: 'Reembolsable si se realiza la cirugía',
   },
 }
 
