@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { MedicalWebPageSchema, FAQPageSchema, BreadcrumbSchema } from '@/components/seo/JsonLd'
-import { SITE_CONFIG, DOCTOR_INFO } from '@/lib/constants'
+import { SITE_CONFIG, DOCTOR_INFO, PRICE_ARTICLE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'SMILE vs LASIK: Diferencias, Ventajas y Cuál Elegir | Guía 2025',
+  title: 'SMILE vs LASIK: Diferencias, Ventajas y Cuál Elegir',
   description: 'Comparativa completa SMILE vs LASIK: recuperación, seguridad, precisión y costos. Descubre cuál cirugía refractiva es mejor para ti según tu caso.',
   keywords: 'smile vs lasik, diferencias smile lasik, que es mejor smile o lasik, cirugia refractiva comparativa, lasik o smile',
   alternates: {
@@ -37,7 +37,7 @@ const comparisonFaqs = [
   },
   {
     question: '¿Qué pasa si necesito un retoque?',
-    answer: 'Los retoques son raros en ambas técnicas (menos del 1-2% de casos). En LASIK se puede levantar el mismo flap. En SMILE se puede hacer PRK de superficie o un nuevo SMILE. Ambos están cubiertos en nuestra garantía del primer año.',
+    answer: 'Si queda graduación residual, el cirujano evalúa si conviene un retoque y qué técnica es adecuada. Las condiciones, honorarios y posibles gastos de quirófano deben quedar especificados por escrito en la cotización.',
   },
 ]
 
@@ -370,7 +370,7 @@ export default function SmileVsLasikPage() {
               className="!bg-white !text-blue-600 hover:!bg-blue-50"
             />
             <Link
-              href="/precio-smile-cdmx"
+              href={PRICE_ARTICLE_URL}
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               Más Información →

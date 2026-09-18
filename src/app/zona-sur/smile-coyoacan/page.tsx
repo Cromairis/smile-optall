@@ -134,10 +134,10 @@ export default function SmileCoyoacanPage() {
             </div>
             <div className="bg-blue-50 p-6 rounded-xl text-center">
               <div className="text-4xl mb-4">🎯</div>
-              <h3 className="font-semibold mb-2">Alta Tasa de Éxito</h3>
+              <h3 className="font-semibold mb-2">Seguimiento individual</h3>
               <p className="text-sm text-gray-600">
-                Retoque sin costo adicional el primer año.
-                98%+ de satisfacción.
+                El seguimiento y la posibilidad de un retoque dependen de su evolución.
+                Solicite las condiciones y los costos por escrito.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl text-center">

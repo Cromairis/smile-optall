@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Páginas geolocalizadas
   const geoPages = Object.entries(ZONES).flatMap(([zoneKey, zone]) =>
-    zone.neighborhoods.map((neighborhood) => ({
+    zone.neighborhoods.filter((neighborhood) => neighborhood.status === 'active').map((neighborhood) => ({
       url: `${baseUrl}/zona-${zoneKey}/smile-${neighborhood.slug}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,

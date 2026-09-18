@@ -2,14 +2,14 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { BUSINESS_INFO } from '@/lib/constants'
+import { BUSINESS_INFO, PRICE_ARTICLE_URL } from '@/lib/constants'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigation = [
     { name: 'Inicio', href: '/' },
-    { name: 'Precios', href: '/precio-smile-cdmx' },
+    { name: 'Precios', href: PRICE_ARTICLE_URL },
     { name: 'SMILE vs LASIK', href: '/smile-vs-lasik' },
     { name: 'Zonas', href: '/zona-sur/smile-pedregal' },
   ]

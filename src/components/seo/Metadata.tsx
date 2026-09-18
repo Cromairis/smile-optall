@@ -99,7 +99,7 @@ export const precioMetadata = generateSEOMetadata({
 })
 
 export const smileVsLasikMetadata = generateSEOMetadata({
-  title: 'SMILE vs LASIK: Diferencias, Ventajas y Cuál Elegir | Guía 2025',
+  title: 'SMILE vs LASIK: Diferencias, Ventajas y Cuál Elegir',
   description: 'Comparativa completa SMILE vs LASIK: recuperación, seguridad, precisión y costos. Descubre cuál cirugía refractiva es mejor para ti según tu caso.',
   path: '/smile-vs-lasik',
   keywords: [

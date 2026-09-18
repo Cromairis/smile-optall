@@ -10,6 +10,8 @@ export const SITE_CONFIG = {
   locale: 'es-MX',
 }
 
+export const PRICE_ARTICLE_URL = 'https://optallvision.com/blog/cuanto-cuesta-una-cirugia-smile-en-mexico/'
+
 export const BUSINESS_INFO = {
   name: 'Optall Vision',
   legalName: 'Optall Vision S.A. de C.V.',

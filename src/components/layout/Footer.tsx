@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { BUSINESS_INFO, DOCTOR_INFO } from '@/lib/constants'
+import { BUSINESS_INFO, DOCTOR_INFO, PRICE_ARTICLE_URL } from '@/lib/constants'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -22,7 +22,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
-                <Link href="/precio-smile-cdmx" className="hover:text-white transition-colors">
+                <Link href={PRICE_ARTICLE_URL} className="hover:text-white transition-colors">
                   Precio SMILE CDMX
                 </Link>
               </li>

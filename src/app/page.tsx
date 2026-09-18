@@ -5,7 +5,7 @@ import { CTAButton } from '@/components/ui/CTAButton'
 import { StatCard, StatGrid } from '@/components/ui/StatCard'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { MedicalWebPageSchema, FAQPageSchema } from '@/components/seo/JsonLd'
-import { DOCTOR_INFO, PRICING, EQUIPMENT, BUSINESS_INFO, SITE_CONFIG } from '@/lib/constants'
+import { DOCTOR_INFO, PRICING, EQUIPMENT, BUSINESS_INFO, SITE_CONFIG, PRICE_ARTICLE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Cirugía SMILE en CDMX | Dr. César Sánchez Galeana | Optall Vision',
@@ -23,7 +23,7 @@ const homeFaqs = [
   },
   {
     question: '¿Cuánto cuesta la cirugía SMILE en CDMX?',
-    answer: 'Consulta el precio en tu valoración. Aceptamos diferentes formas de pago.',
+    answer: 'La cirugía SMILE cuesta de $40,000 a $50,000 MXN por ambos ojos. La evaluación cuesta $2,500 MXN y es reembolsable si se realiza la cirugía en Optall Vision. Consulte los conceptos incluidos en su cotización.',
   },
   {
     question: '¿Cuánto dura la recuperación de SMILE?',
@@ -63,7 +63,7 @@ export default function HomePage() {
                   variant="secondary"
                   size="lg"
                   text="Más Información →"
-                  href="/precio-smile-cdmx"
+                  href={PRICE_ARTICLE_URL}
                 />
               </div>
               <div className="mt-6 flex items-center gap-4 text-sm text-gray-500">
@@ -191,7 +191,7 @@ export default function HomePage() {
           <p className="text-blue-100 mb-8">Financiamiento disponible • {PRICING.smile.msiText}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/precio-smile-cdmx"
+              href={PRICE_ARTICLE_URL}
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               Más Información
